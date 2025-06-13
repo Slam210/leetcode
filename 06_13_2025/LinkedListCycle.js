@@ -11,15 +11,16 @@
  * @return {boolean}
  */
 var hasCycle = function (head) {
-  const visited = new Set();
-  let current = head;
+  let slow = head;
+  let fast = head;
 
-  while (current !== null) {
-    if (visited.has(current)) {
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
       return true;
     }
-    visited.add(current);
-    current = current.next;
   }
 
   return false;
