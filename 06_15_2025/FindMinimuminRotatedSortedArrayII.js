@@ -29,4 +29,11 @@ var findMin = function (nums) {
   return nums[left];
 };
 
-console.log(findMin([4, 5, 6, 7, 0, 1, 4])); 
+console.log(findMin([4, 5, 6, 7, 0, 1, 4]));
+
+/*
+
+Run time is O(log n) since we are doing binary search though worse case is O(n)
+Space complexity is O(1)
+
+*/
