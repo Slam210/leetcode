@@ -1,3 +1,12 @@
+/*
+
+The intuition behind this problem is that we cannot sort the array as that is n log(n) time.
+Therefore, we can perform a bucket sort to determine the max gap between the min and max of each bucket
+This is because we can evenly divide the array into buckets, assign each value in the array to it's respective bucket
+and find the maximum gap by taking the max of one bucket and comparing it to the min of the next bucket.
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -79,3 +88,10 @@ int main()
     printf("Maximum Gap: %d\n", result);
     return 0;
 }
+
+/*
+
+Run time is O(n) as we do multiple single iterations of the array
+Space complexity is O(n) as we only use array for storage
+
+*/
