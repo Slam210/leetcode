@@ -25,7 +25,6 @@ class Solution:
         
         return rob2
 
-# Example usage
 if __name__ == "__main__":
     solution = Solution()
     test_cases = [
