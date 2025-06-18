@@ -1,3 +1,11 @@
+/*
+
+The intuition behind this is to use a Sieve of Eratosthenes so that
+instead of checking each number one-by-one, we use a sieve. This allows
+us to mark all numbers as potential primes and then eliminate multiples of every found prime.
+
+*/
+
 function countPrimes(n: number): number {
   if (n <= 2) return 0;
 
@@ -16,3 +24,10 @@ function countPrimes(n: number): number {
 }
 
 console.log(countPrimes(10));
+
+/*
+
+Run time is O(n log(log(n)))
+Space complexity is O(n)
+
+*/
