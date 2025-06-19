@@ -39,7 +39,12 @@ int main()
 {
     Solution solution;
 
-    vector<int> nums = {1, 2, 3, 1};
+    vector<int> nums;
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(1);
+
     int k = 3;
 
     bool result = solution.containsNearbyDuplicate(nums, k);
