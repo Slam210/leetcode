@@ -49,3 +49,10 @@ public class ReconstructItinerary {
         System.out.println("Itinerary: " + itinerary);
     }
 }
+
+/**
+ * 
+ * Run time is O(E log(E))
+ * Space complexity is O(E)
+ * 
+ */
