@@ -52,3 +52,10 @@ int rob(struct TreeNode *root)
     free(result);
     return maxRobbed;
 }
+
+/**
+ *
+ * Time complexity is O(n) as each node is visited once
+ * Space complexity is O(h) as it's the height of the tree
+ *
+ */
