@@ -14,7 +14,10 @@ class Solution:
         MAX_INT = 0x7FFFFFFF
 
         while b != 0:
-            a, b = (a ^ b) & MASK, ((a & b) << 1) & MASK
+            s = (a ^ b) & MASK
+            c = (a & b) & MASK
+            a = s
+            b = c << 1
 
         return a if a <= MAX_INT else ~(a ^ MASK)
 
