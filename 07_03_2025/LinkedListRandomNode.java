@@ -1,3 +1,12 @@
+
+/**
+ * 
+ * When we don’t know the length of the stream/list in advance and want to 
+ * randomly select 1 item with equal probability, Reservoir Sampling ensures 
+ * each item has equal chance (1/n).
+ * 
+ */
+
 import java.util.Random;
 
 public class LinkedListRandomNode {
