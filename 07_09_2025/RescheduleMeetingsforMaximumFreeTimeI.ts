@@ -4,14 +4,11 @@
  * startTime and endTime of length n, representing n non-overlapping, sorted meetings. 
  * An integer k which is the number of consecutive meetings we’re allowed to reschedule. 
  * We need to return the maximum possible continuous free time within the event after 
- * rescheduling at most k meetings. The total occupied time of meetings is fixed. To maximize 
- * free time, we want to shift a window of k meetings into a tight block, and then see where 
- * this opens the largest contiguous block of time elsewhere. So we’ll compute prefix sums of 
- * meeting durations. For every possible window of k consecutive meetings, we’ll imagine moving 
- * them together and calculate the new schedule. This includes total meeting time inside window, 
- * range they originally spanned, and free time gained = original span - duration. The rest of the 
- * meetings stay where they are. Total free time = eventTime - totalMeetingTime, but we want the 
- * largest single free slot we can get by compacting k meetings.
+ * rescheduling at most k meetings. Meetings are spread over time and occupy space. Moving a 
+ * group of k meetings lets us compress their time usage. You check each possible window of k 
+ * consecutive meetings. Measure the original time span they occupy. Subtract how much time
+ * they actually take. The freed space is span - occupied. Keep track of the maximum freed 
+ * block found this way
  * 
  */
 
@@ -21,33 +18,29 @@ function maxFreeTime(
   startTime: number[],
   endTime: number[]
 ): number {
-  const n = startTime.length;
+  const count = startTime.length;
+  const prefixSum = new Array(count + 1).fill(0);
+  let maxFree = 0;
 
-  // Compute durations
-  const durations = startTime.map((s, i) => endTime[i] - s);
-
-  // Prefix sum of durations
-  const prefix = new Array(n + 1).fill(0);
-  for (let i = 0; i < n; i++) {
-    prefix[i + 1] = prefix[i] + durations[i];
+  // Compute prefix sum of meeting durations
+  for (let i = 0; i < count; i++) {
+    prefixSum[i + 1] = prefixSum[i] + (endTime[i] - startTime[i]);
   }
 
-  const totalMeetingTime = prefix[n];
-  let maxFreeGain = 0;
+  // Slide window of size k
+  for (let i = k - 1; i < count; i++) {
+    const occupied = prefixSum[i + 1] - prefixSum[i - k + 1];
 
-  // Sliding window of size k
-  for (let l = 0; l <= n - k; l++) {
-    const r = l + k - 1;
-    const totalDuration = prefix[r + 1] - prefix[l];
-    const span = endTime[r] - startTime[l];
-    const freeGain = span - totalDuration;
-    maxFreeGain = Math.max(maxFreeGain, freeGain);
+    const windowStart = i === k - 1 ? 0 : endTime[i - k];
+    const windowEnd = i === count - 1 ? eventTime : startTime[i + 1];
+
+    const freeTime = windowEnd - windowStart - occupied;
+    maxFree = Math.max(maxFree, freeTime);
   }
 
-  const totalFreeTime = eventTime - totalMeetingTime;
-  return maxFreeGain + totalFreeTime;
+  return maxFree;
 }
-
+  
 /**
  * 
  * Time compleixty is O(n)
