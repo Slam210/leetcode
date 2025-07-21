@@ -37,4 +37,32 @@ For each problem, a consistent three-step process:
 
 ---
 
+### After July 7th
+
+- I follow a new multi-language schedule for writing solutions:
+
+| Day       | Language   |
+| --------- | ---------- |
+| Sunday    | SQL        |
+| Monday    | C          |
+| Tuesday   | Python     |
+| Wednesday | TypeScript |
+| Thursday  | Java       |
+| Friday    | C++        |
+| Saturday  | SQL        |
+
+- I will begin shortening the amount of daily problems to 6 (1 daily and 5 regular problems) in the attempt to begin full stack developing apps and websites once more. These projects can be found throughout my github and will be listed below.
+- First Project (Nextjs, React, Tailwind, Payload, MongoDB, Stripe, tRPC):  
+  [Basic Ecommerce Site](http://github.com/Slam210/ecommerce)
+
+---
+
+### After July 21st
+
+- Easy problems will no longer have summary, intuition, and time/space complexity analysis
+- Medium problems will have summary, intuition, time/space complexity analysis on the top and bottom of page
+- Hard Problems will be additionally commented to help further develop understanding.
+
+---
+
 Feel free to explore the problems and solutions
