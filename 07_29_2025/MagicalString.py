@@ -48,3 +48,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
+
+Time complexity is O(n)
+Space complexity is O(n)
+
+"""
