@@ -1,3 +1,15 @@
+/**
+ *
+ * We're given a circular integer array nums. For each element x, we must find the next greater
+ * number when traversing forward in the array. If there's no such number, return -1 for that
+ * element. This is like the classic Next Greater Element problem, but the circularity means we
+ * may have to wrap around to the beginning. We can use a monotonic stack to track indices whose
+ * next greater hasn't been found yet. We traverse the array twice. While looping, pop from stack
+ * if current number is greater than the number at stack top. Only push indices from the first pass
+ * to avoid duplicates.
+ *
+ */
+
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -41,3 +53,9 @@ public class NextGreaterElementII {
     }
   }
 }
+/**
+ *
+ * Time complexity is O(n)
+ * Space complexity is O(n)
+ *
+ */
