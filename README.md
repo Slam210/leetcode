@@ -47,13 +47,14 @@ For each problem, a consistent three-step process:
 | Monday    | C          |
 | Tuesday   | Python     |
 | Wednesday | TypeScript |
-| Thursday  | Java       |
-| Friday    | C++        |
+| Thursday  | C++        |
+| Friday    | Java       |
 | Saturday  | SQL        |
 
 - I will begin shortening the amount of daily problems to 6 (1 daily and 5 regular problems) in the attempt to begin full stack developing apps and websites once more. These projects can be found throughout my github and will be listed below.
 - First Project (Nextjs, React, Tailwind, Payload, MongoDB, Stripe, tRPC):  
   [Basic Ecommerce Site](http://github.com/Slam210/ecommerce)
+  [Personal Portfolio](http://github.com/Slam210/slam-portfolio)
 
 ---
 
