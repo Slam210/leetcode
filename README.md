@@ -66,4 +66,10 @@ For each problem, a consistent three-step process:
 
 ---
 
+### Beginning Augest 4st
+
+- Language will be strictly typescript as that is the language I am beginning job applications in
+
+---
+
 Feel free to explore the problems and solutions
