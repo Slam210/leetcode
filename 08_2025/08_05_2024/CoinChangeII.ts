@@ -1,3 +1,13 @@
+/**
+ *
+ * Given coins[] which is an array of coin denominations and amount, a target amount, the goal is to
+ * return the number of distinct combinations (order doesn't matter) of coins that sum up to amount.
+ * ach coin can be used infinite times. This is a classic Dynamic Programming (DP) problem. We want to
+ * find the number of combinations to reach a certain amount. It’s like a variation of the Unbounded
+ * Knapsack problem.
+ *
+ */
+
 function change(amount: number, coins: number[]): number {
   const dp = new Array(amount + 1).fill(0);
   dp[0] = 1;
