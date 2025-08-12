@@ -60,6 +60,12 @@ function checkRecord(n: number): number {
   return Number(total);
 }
 
+function main() {
+  console.log(checkRecord(2));
+  console.log(checkRecord(1));
+  console.log(checkRecord(10101));
+}
+
 main();
 
 /**
