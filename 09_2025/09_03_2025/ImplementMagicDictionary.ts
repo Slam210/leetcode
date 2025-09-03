@@ -1,3 +1,13 @@
+/**
+ *
+ * We want to efficiently determine whether a search word can match a dictionary word with exactly one character
+ * modification. To do this, we first organize dictionary words by their lengths. Then, during a search, we skip
+ * unnecessary comparisons by only checking words of the same length. For each word, we check how many characters
+ * differ. If it’s exactly one, we return true. Otherwise, after checking all candidates, we return false. This
+ * keeps the design simple, direct, and efficient enough for the problem constraints.
+ *
+ */
+
 class MagicDictionary {
   private dict: Map<number, string[]>;
 
@@ -49,3 +59,10 @@ function main() {
 }
 
 main();
+
+/**
+ *
+ * Time complexity is  O(n)
+ * Space complexity is O(n)
+ *
+ */
