@@ -9,7 +9,7 @@
  *
  */
 
-function doesAliceWin(s: string): boolean {
+export default function doesAliceWin(s: string): boolean {
   const vowels = new Set(["a", "e", "i", "o", "u"]);
   for (const ch of s) {
     if (vowels.has(ch)) {
