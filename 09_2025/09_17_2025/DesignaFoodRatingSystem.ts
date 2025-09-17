@@ -65,7 +65,7 @@ class FoodHeap {
   }
 }
 
-class FoodRatings {
+export default class FoodRatings {
   private foodToCuisine: Map<string, string> = new Map();
   private foodToRating: Map<string, number> = new Map();
   private cuisineHeaps: Map<string, FoodHeap> = new Map();
