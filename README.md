@@ -66,10 +66,26 @@ For each problem, a consistent three-step process:
 
 ---
 
-### Beginning Augest 4st
+### Beginning August 4st
 
 - Language will be strictly typescript as that is the language I am beginning job applications in
 
 ---
 
 Feel free to explore the problems and solutions
+
+### Beginning September 21st
+
+- I follow a multi-language schedule for writing solutions:
+
+| Day       | Language   |
+| --------- | ---------- |
+| Sunday    | MySql      |
+| Monday    | Python3    |
+| Tuesday   | TypeScript |
+| Wednesday | Python3    |
+| Thursday  | TypeScript |
+| Friday    | Python3    |
+| Saturday  | MySql      |
+
+The reasoning for this is due to needing to have a knowledge base for how an actual backend language like python works. While it isn't required for certain positions, it is nice to know a seperate backend language which is most likely how future positions will work.
