@@ -1,7 +1,7 @@
 """
 
 We want to construct the largest valid monotone increasing number less than or equal to n. 
-To do this, we look at the digits of n from left to right and find where the monotone property fails. 
+To do this, we look at the digits of n from right to left and find where the monotone property fails. 
 Once found, we decrease the violating digit by one and make all digits to the right into 9s. 
 If the decrease causes new violations earlier, we backtrack and adjust those digits as well. 
 This method ensures we end up with the biggest number possible that still respects monotone increasing digits.
@@ -10,21 +10,20 @@ This method ensures we end up with the biggest number possible that still respec
 
 class Solution:
     def monotoneIncreasingDigits(self, n: int) -> int:
-        digits = list(str(n))
+        digits = list(map(int, str(n)))
         length = len(digits)
-        
-        i = 0
-        while i < length - 1 and digits[i] <= digits[i+1]:
-            i += 1
-        
-        if i < length - 1:
-            while i > 0 and digits[i] > digits[i+1]:
-                digits[i] = str(int(digits[i]) - 1)
-                i -= 1
-            digits[i] = str(int(digits[i]) - 1)
-            for j in range(i+1, length):
-                digits[j] = '9'
-        return int("".join(digits))
+
+        mark = length
+
+        for i in range(length - 1, 0, -1):
+            if digits[i - 1] > digits[i]:
+                digits[i - 1] -= 1
+                mark = i
+
+        for j in range(mark, length):
+            digits[j] = 9
+
+        return int(''.join(map(str, digits)))
     
 def main():
     sol = Solution()
