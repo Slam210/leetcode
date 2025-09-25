@@ -16,10 +16,10 @@ export default function makeLargestSpecial(s: string): string {
 
   for (let i = 0; i < s.length; i++) {
     balance += s[i] === "1" ? 1 : -1;
-    if ((balance = 0)) {
+    if (balance === 0) {
       let inner = s.slice(last + 1, i);
       subs.push("1" + makeLargestSpecial(inner) + "0");
-      last = i = 1;
+      last = i + 1;
     }
   }
 
