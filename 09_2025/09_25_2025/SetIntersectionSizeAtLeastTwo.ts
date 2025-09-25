@@ -10,7 +10,7 @@
  *
  */
 
-function intersectionSizeTwo(intervals: number[][]): number {
+export default function intersectionSizeTwo(intervals: number[][]): number {
   // Sort intervals by end asc, start desc
   intervals.sort((a, b) => {
     if (a[1] === b[1]) return b[0] - a[0];
