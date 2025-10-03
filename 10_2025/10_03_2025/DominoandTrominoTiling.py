@@ -39,3 +39,10 @@ if __name__ == "__main__":
     for n, expected in tests:
         result = sol.numTilings(n)
         print(f"n={n} -> {result} (expected {expected})")
+
+"""
+
+Time complexity is O(n)
+Space complexity is O(n)
+
+"""
