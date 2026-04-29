@@ -89,3 +89,7 @@ Feel free to explore the problems and solutions
 | Saturday  | MySql      |
 
 The reasoning for this is due to needing to have a knowledge base for how an actual backend language like python works. While it isn't required for certain positions, it is nice to know a seperate backend language which is most likely how future positions will work.
+
+## Beginning April 29th, 2026
+
+I will be switching to Typescript only to get back in the hang on doing daily leetcode probems.
